@@ -1,3 +1,10 @@
+<?php
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $datainicial = $_POST["dtaInicial"];
+        $datafinal = $_POST["dataFinal"];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +15,12 @@
 </head>
 <body>
     <section>
+        <form method="post">
         <div class="container">
             <h1>Contador de dias:</h1>
             <div class="box01">
                 <label for="#">Data inicial:</label>
-                <input type="date" id="initialDate">
+                <input type="date" id="initialDate" name="dataInicial">
             </div>
             <div class="box02">
                 <label for="#">Data final:</label>
@@ -22,6 +30,7 @@
             <div class="result" id="box03"></div>
         </div>
     </section>
+        </form>
     <script src="script.js"></script>
 </body>
 </html>
